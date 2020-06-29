@@ -51,7 +51,7 @@ def klasor_olustur(kisi_path):
     print("Klasörler oluşturuluyor!")
     print("------------------------")
     print(bcolors.RED + bcolors.BOLD)
-    for dirpath, dnames, fnames in os.walk("./"+kisi_path):
+    for dirpath, dnames, fnames in os.walk("/"+kisi_path):
         for f in fnames:
             if f.endswith(".jpg") or f.endswith(".png") or f.endswith(".JPG"):
                 kisi_listesi.append(f.split(".")[0])
@@ -156,7 +156,7 @@ def gez_ve_gonder(foto_path):
     unknown = 0
     ortak_say = 0
     manzara = 0
-    for dirpath, dnames, fnames in os.walk("./"+foto_path):
+    for dirpath, dnames, fnames in os.walk("/"+foto_path):
         for f in fnames:
             if f.endswith(".jpg") or f.endswith(".png") or f.endswith(".jpeg") or f.endswith(".JPG"):
                 
