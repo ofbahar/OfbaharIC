@@ -26,7 +26,7 @@
 
 - python3 Ofbahar.py komutuyla program çalıştırıldıktan sonra tanınması gereken kişilerin bulunduğu klasörün yolu isteniyor.
 - Kişiler klasörü girildikten sonra ayrıştırılacak fotoğrafların bulunduğu klasör yolu isteniyor.
-- Daha sonra program "Katalog" isimli bir klasör açıp içerisine kişiler klasöründeki isimler için klasör açıyor. Tanınmayan kişiler için "Unknnown", manzara fotoğrafları için "Manzara", birden fazla kişinin aynı fotğrafta bulunmasına karşın "Ortak" klasörü açılıyor.
+- Daha sonra program "Katalog" isimli bir klasör açıp içerisine kişiler klasöründeki isimler için klasör açıyor. Tanınmayan kişiler için "Unknown", manzara fotoğrafları için "Manzara", birden fazla kişinin aynı fotğrafta bulunmasına karşın "Ortak" klasörü açılıyor.
 - Son olarak ayırma işlemi yapılıp raporlar gösteriliyor. 
 
 ### Ekran Fotoğrafları
