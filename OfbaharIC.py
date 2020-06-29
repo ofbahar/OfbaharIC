@@ -2,6 +2,7 @@ import face_recognition as fr
 import os
 import cv2
 import numpy as np
+from urllib.request import urlopen
 from time import sleep
 
 global kisi_say
@@ -11,8 +12,6 @@ global foto_path
 
 kisi_listesi = []
 kisi_say = []
-
-
 
 class bcolors:
     BLUE = '\033[94m'
@@ -25,6 +24,16 @@ class bcolors:
     BGRED = '\033[41m'
     WHITE = '\033[37m'
 
+def guncelle():
+    print(" - Güncellemeler kontrol ediliyor...")
+    version = urlopen("https://raw.githubusercontent.com/4w4k3/BeeLogger/master/version.txt").read()
+    with open("version.txt", "r") as eskiv:
+        if eskiv.read() != version:
+            os.system("git pull origin master")
+            print(" - Program v" + str(version) + " sürümüne güncellendi!")
+
+        else:
+            print(" - Program güncel!")
 
 def klasor_olustur(kisi_path):
     if not os.path.exists("Katalog"):
@@ -225,6 +234,9 @@ def boslari_topla():
             os.system("rmdir Katalog/"+kisi_listesi[i])
 
 def logo():
+
+    version = open("version.txt", "r")
+    ver = version.read()
     os.system("clear")
     print(bcolors.BLUE)
     print("  ___   __ _           _               ___ ____ ")
@@ -232,7 +244,7 @@ def logo():
     print("| | | | |_| '_ \ / _` | '_ \ / _` | '__| | |    ")
     print("| |_| |  _| |_) | (_| | | | | (_| | |  | | |___ ")
     print(" \___/|_| |_.__/ \__,_|_| |_|\__,_|_| |___\____|")
-    print("   v1.0 - Ofbahar | https://github.com/ofbahar")
+    print("   Ofbahar | https://github.com/ofbahar - v"+ver)
     print(bcolors.ENDC)
 
 def rapor():
@@ -265,6 +277,10 @@ def cikis():
     print("----------------------------------")
     print(bcolors.ENDC)
 
+try:
+    guncelle()
+except:
+    print("Güncelleme alınamadı")
 logo()
 print(bcolors.GREEN + bcolors.BOLD)
 kisi_path = input("Kişiler klasörünün yolunu giriniz : ")
@@ -279,6 +295,3 @@ except KeyboardInterrupt:
 rapor()
 boslari_topla()
 cikis()
-                                        
-
-
