@@ -34,6 +34,8 @@ def guncelle():
 
         else:
             print(" - Program güncel!")
+    
+    sleep(3)
 
 def klasor_olustur(kisi_path):
     if not os.path.exists("Katalog"):
