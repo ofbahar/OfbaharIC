@@ -2,7 +2,7 @@
 ### Açıklama
 - Fotoğraf yığınınızı yüz tanıma ile kişilere göre klasörlere ayırmak ve dağınıklıktan kurtulmanızı sağlamak için yazılmış bir program.
 
-### Warnings
+### Uyarılar
 
 - Windows ve MacOS ile uyumlu değildir!
 - Python3+ ile uyumludur!
