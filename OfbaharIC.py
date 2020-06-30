@@ -51,7 +51,7 @@ def klasor_olustur(kisi_path):
     print("Klasörler oluşturuluyor!")
     print("------------------------")
     print(bcolors.RED + bcolors.BOLD)
-    for dirpath, dnames, fnames in os.walk("/"+kisi_path):
+    for dirpath, dnames, fnames in os.walk(kisi_path):
         for f in fnames:
             if f.endswith(".jpg") or f.endswith(".png") or f.endswith(".JPG"):
                 kisi_listesi.append(f.split(".")[0])
@@ -79,7 +79,7 @@ def get_encoded_faces():
     """
     encoded = {}
     try:
-        for dirpath, dnames, fnames in os.walk("./"+kisi_path):
+        for dirpath, dnames, fnames in os.walk(kisi_path):
             for f in fnames:
                 if f.endswith(".jpg") or f.endswith(".png") or f.endswith(".JPG"):
                     face = fr.load_image_file(kisi_path+r'/' + f)
@@ -156,7 +156,7 @@ def gez_ve_gonder(foto_path):
     unknown = 0
     ortak_say = 0
     manzara = 0
-    for dirpath, dnames, fnames in os.walk("/"+foto_path):
+    for dirpath, dnames, fnames in os.walk(foto_path):
         for f in fnames:
             if f.endswith(".jpg") or f.endswith(".png") or f.endswith(".jpeg") or f.endswith(".JPG"):
                 
@@ -225,7 +225,7 @@ def gez_ve_gonder(foto_path):
 def yuzdelik():
     global ytoplam
     ytoplam=0
-    for dirpath, dnames, fnames in os.walk("./"+foto_path):
+    for dirpath, dnames, fnames in os.walk(foto_path):
         for f in fnames:
             if f.endswith(".jpg") or f.endswith(".png") or f.endswith(".jpeg") or f.endswith(".JPG"):
                 ytoplam+=1
@@ -281,10 +281,12 @@ def cikis():
     print("----------------------------------")
     print(bcolors.ENDC)
 
+
 try:
     guncelle()
 except:
     print("Güncelleme alınamadı")
+
 logo()
 print(bcolors.GREEN + bcolors.BOLD)
 kisi_path = input("Kişiler klasörünün yolunu giriniz : ")
