@@ -26,7 +26,7 @@ class bcolors:
 
 def guncelle():
     
-    os.system("git clean -xffd")
+    os.system("git clean -xf")
     print(" - Güncellemeler kontrol ediliyor...")
     version = urlopen("https://raw.githubusercontent.com/4w4k3/BeeLogger/master/version.txt").read()
     with open("version.txt", "r") as eskiv:
