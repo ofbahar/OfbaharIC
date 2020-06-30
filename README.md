@@ -14,6 +14,7 @@
 - cv2
 - numpy
 - time
+- urllib
 
 ### Kurulum (Debian)
 ```
