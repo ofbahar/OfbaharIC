@@ -1,6 +1,6 @@
 ![Logo](https://i.hizliresim.com/9iFCQT.png)
 ### Açıklama
-- Fotoğraf yığınınızı yüz tanıma ile kişilere göre klasörlere ayırmak ve dağınıklıktan kurtulmanızı sağlamak için yazılmış bir program.
+- **Fotoğraf yığınınızı yüz tanıma ile kişilere göre klasörlere ayırmak ve dağınıklıktan kurtulmanızı sağlamak için yazılmış bir program.
 
 ### Uyarılar
 
